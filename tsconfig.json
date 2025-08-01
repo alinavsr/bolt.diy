@@ -1,33 +1,15 @@
 {
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["@remix-run/cloudflare", "vite/client", "@cloudflare/workers-types/2023-07-01", "@types/dom-speech-recognition"],
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "target": "ESNext",
     "strict": true,
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react-native",
+    "lib": ["dom", "es2017"],
+    "moduleResolution": "node",
+    "noEmit": true,
     "skipLibCheck": true,
-    "verbatimModuleSyntax": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"]
-    },
-
-    // vite takes care of building everything, not tsc
-    "noEmit": true
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/.server/**/*.ts",
-    "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
-  ]
+    "resolveJsonModule": true
+  }
 }
